@@ -1,3 +1,4 @@
+import shutil
 import click
 import json
 import logging
@@ -31,7 +32,7 @@ EXCLUDED_OPTIONS = [
 ]
 
 def get_width():
-    return dict(max_content_width=click.get_terminal_size()[0])
+    return dict(max_content_width=shutil.get_terminal_size()[0])
 
 def json_to_dict(ctx, param, value):
     if value is None:
